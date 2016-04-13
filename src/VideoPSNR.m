@@ -1,11 +1,9 @@
-function [Q cdf pdf Qf] = VideoDiffPDF(SourceYUV,RecoverYUV,numOfFrame,frameWidth,frameHeight)
+function [psnr_ave psnr_frames] = VideoPSNR(SourceYUV,RecoverYUV,numOfFrame,frameWidth,frameHeight)
     fid1 = fopen(SourceYUV,'r');
     fid2 = fopen(RecoverYUV,'r');
     
-    pdf = zeros(1,511);
-    Qf = zeros(1,numOfFrame);
-	
-	range = 0;
+    psnr_frames = zeros(1,numOfFrame);
+    bit_depth = 8;
     
     filename = RecoverYUV
     for frame = 1:numOfFrame
@@ -26,16 +24,11 @@ function [Q cdf pdf Qf] = VideoDiffPDF(SourceYUV,RecoverYUV,numOfFrame,frameWidt
         U2 = fread(fid2,[frameWidth,frameHeight], 'uchar');
         V2 = fread(fid2,[frameWidth,frameHeight], 'uchar');
         
-        [n Qn] = FrameDiffPDF(Y1,Y2,range);
-        pdf = pdf + n; 
-        Qf(frame) = Qn;
+        psnr_frames(frame) = psnr(Y1,Y2,bit_depth);
     end
 	
 	fclose(fid1);
     fclose(fid2);
     
-    pdf(pdf<0) = 0;
-    pdf = pdf / sum(pdf);
-    cdf = cumsum(pdf);
-    Q = pdf(256);
+    psnr_ave = mean(psnr_frames);
 end
