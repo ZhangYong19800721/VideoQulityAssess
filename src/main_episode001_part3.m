@@ -1,6 +1,6 @@
 clear all;
 close all;
-numOfFrame = 915; %注意修改
+numOfFrame = 900; %注意修改
 frameWidth = 4096;
 frameHeight = 2160;
 
