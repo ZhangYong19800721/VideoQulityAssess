@@ -31,3 +31,4 @@ RecoverVideo_12000K = 'out_episode003_12000K.yuv';
 [SSIM12000K SSIMf12000K] = VideoSSIM(SourceVideo,RecoverVideo_12000K,numOfFrame,frameWidth,frameHeight);
 
 save('episode003_result_part1.mat');
+exit;
