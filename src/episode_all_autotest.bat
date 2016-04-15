@@ -1,16 +1,13 @@
-
-episode007_autotest.bat
-episode008_autotest.bat
-episode009_autotest.bat
-
-episode001_autotest.bat
-episode002_autotest.bat
-episode003_autotest.bat
-episode004_autotest.bat
-episode005_autotest.bat
-episode006_autotest.bat
-
-episode010_autotest.bat
-episode011_autotest.bat
-episode012_autotest.bat
-episode013_autotest.bat
+call episode001_autotest.bat
+call episode002_autotest.bat
+call episode003_autotest.bat
+call episode004_autotest.bat
+call episode005_autotest.bat
+call episode006_autotest.bat
+call episode007_autotest.bat
+call episode008_autotest.bat
+call episode009_autotest.bat
+call episode010_autotest.bat
+call episode011_autotest.bat
+call episode012_autotest.bat
+call episode013_autotest.bat
