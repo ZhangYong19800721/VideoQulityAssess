@@ -1,4 +1,4 @@
-function [ssim_ave ssim_frames] = VideoSSIM(SourceYUV,RecoverYUV,numOfFrame,frameWidth,frameHeight)
+function [ssim_ave ssim_frames] = VideoSSIM(SourceYUV,RecoverYUV,numOfFrame,frameWidth,frameHeight,chroma)
     fid1 = fopen(SourceYUV,'r');
     fid2 = fopen(RecoverYUV,'r');
 	

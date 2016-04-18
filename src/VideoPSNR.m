@@ -1,4 +1,4 @@
-function [psnr_ave psnr_frames] = VideoPSNR(SourceYUV,RecoverYUV,numOfFrame,frameWidth,frameHeight)
+function [psnr_ave psnr_frames] = VideoPSNR(SourceYUV,RecoverYUV,numOfFrame,frameWidth,frameHeight,chroma)
     fid1 = fopen(SourceYUV,'r');
     fid2 = fopen(RecoverYUV,'r');
 	
