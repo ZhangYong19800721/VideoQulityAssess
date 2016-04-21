@@ -1,9 +1,7 @@
 function flag = yuvplayer( filename, frame_start, frame_end, width, height, chroma)
 %UNTITLED1 Summary of this function goes here
 %  Detailed explanation goes here
-    fid = fopen('out.yuv','r');
-    
-    Y = zeros(width,height);
+    fid = fopen(filename,'r');
     
     if chroma == 'yuv444p'
         w = width;
@@ -18,6 +16,7 @@ function flag = yuvplayer( filename, frame_start, frame_end, width, height, chro
         error('Wrong chroma format');
     end
     
+    Y = zeros(width,height);    
     U = zeros(w,h);
     V = zeros(w,h);
     
@@ -29,11 +28,13 @@ function flag = yuvplayer( filename, frame_start, frame_end, width, height, chro
         n = n-1;
     end
     
+    figure;
+    hold;
+    
     for frame = frame_start:frame_end
         Y = fread(fid,[width height],'uchar');
         U = fread(fid,[w h],'uchar');
         V = fread(fid,[w h],'uchar');
-        figure;
         imshow(Y'/255);
     end
     

@@ -1,0 +1,23 @@
+ 
+  To get started, type one of these: helpwin, helpdesk, or demo.
+  For product information, visit www.mathworks.com.
+ 
+
+filename =
+
+out_episode001_20000K.yuv
+
+
+process =
+
+  9.8039e-004
+
+??? Error using ==> fread
+Invalid file identifier -1.
+
+Error in ==> VideoDiffPDF at 35
+        Y1 = fread(fid1,[frameWidth,frameHeight], 'uchar');
+
+Error in ==> main_episode001_part1 at 14
+[Q20000K cdf20000K pdf20000K Qf20000K] = VideoDiffPDF(SourceVideo,RecoverVideo_20000K,numOfFrame,frameWidth,frameHeight,'yuv420p');
+
