@@ -1,6 +1,6 @@
-#call episode001_autotest.bat
-#call episode002_autotest.bat
-#call episode003_autotest.bat
+call episode001_autotest.bat
+call episode002_autotest.bat
+call episode003_autotest.bat
 call episode004_autotest.bat
 call episode005_autotest.bat
 call episode006_autotest.bat

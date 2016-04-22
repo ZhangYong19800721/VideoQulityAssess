@@ -28,7 +28,7 @@ function flag = yuvplayer( filename, frame_start, frame_end, width, height, chro
         n = n-1;
     end
 	
-    figure;
+	figure;
 	hold;
     
     for frame = frame_start:frame_end
