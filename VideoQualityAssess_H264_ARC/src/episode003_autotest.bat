@@ -28,4 +28,4 @@
  del out_episode003_02000K.yuv
  del out_episode003_01000K.yuv
 
-
+ del out_episode003_99000K.yuv

@@ -27,5 +27,7 @@
  del out_episode001_04000K.yuv
  del out_episode001_02000K.yuv
  del out_episode001_01000K.yuv
+ 
+ del out_episode001_99000K.yuv
 
 
