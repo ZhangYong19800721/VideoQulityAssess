@@ -11,33 +11,20 @@ load('episode001_result_x265_part1.mat');
 load('episode001_result_x265_part2.mat');
 load('episode001_result_x265_part3.mat');
 load('episode001_result_x265_part4.mat');
+% load('split0001_x265_result.mat');
 split0001_PSNR_x265 = [PSNR20000K PSNR18000K PSNR16000K PSNR14000K PSNR12000K PSNR10000K PSNR08000K PSNR06000K PSNR04000K PSNR02000K];
 split0001_PLLP_x265 = [Q20000K Q18000K Q16000K Q14000K Q12000K Q10000K Q08000K Q06000K Q04000K Q02000K];
 split0001_SSIM_x265 = [SSIM20000K SSIM18000K SSIM16000K SSIM14000K SSIM12000K SSIM10000K SSIM08000K SSIM06000K SSIM04000K SSIM02000K];
-
-load('episode001_result_arc_h264.mat');
-arc_rate = [20 18 16 14 12 10 8 6 4 2 1];
-split0001_PSNR_arc_h264 = [PSNR20000K PSNR18000K PSNR16000K PSNR14000K PSNR12000K PSNR10000K PSNR08000K PSNR06000K PSNR04000K PSNR02000K PSNR01000K];
-split0001_PLLP_arc_h264 = [Q20000K Q18000K Q16000K Q14000K Q12000K Q10000K Q08000K Q06000K Q04000K Q02000K Q01000K];
-split0001_SSIM_arc_h264 = [SSIM20000K SSIM18000K SSIM16000K SSIM14000K SSIM12000K SSIM10000K SSIM08000K SSIM06000K SSIM04000K SSIM02000K SSIM01000K];
-
-load('episode001_result_arc_h265.mat');
-arc_rate = [20 18 16 14 12 10 8 6 4 2 1];
-split0001_PSNR_arc_h265 = [PSNR20000K PSNR18000K PSNR16000K PSNR14000K PSNR12000K PSNR10000K PSNR08000K PSNR06000K PSNR04000K PSNR02000K PSNR01000K];
-split0001_PLLP_arc_h265 = [Q20000K Q18000K Q16000K Q14000K Q12000K Q10000K Q08000K Q06000K Q04000K Q02000K Q01000K];
-split0001_SSIM_arc_h265 = [SSIM20000K SSIM18000K SSIM16000K SSIM14000K SSIM12000K SSIM10000K SSIM08000K SSIM06000K SSIM04000K SSIM02000K SSIM01000K];
 
 figure(1);
 plot(rate,split0001_PSNR_x264,'-ro','LineWidth', 2);
 hold;
 plot(rate,split0001_PSNR_x265,'-rs','LineWidth', 2);
-plot(arc_rate,split0001_PSNR_arc_h264,'-.bo','LineWidth', 2);
-plot(arc_rate,split0001_PSNR_arc_h265,'-.bs','LineWidth', 2);
+
 xlabel('编码码率（Mbps）','FontSize',12);
 ylabel('PSNR(dB)','FontSize',12);
 title('split0001','FontSize',12);
-% text(arc_rate(1),split0001_PSNR_arc_h265(1),'\leftarrow 视频中存在花屏现象','HorizontalAlignment','left');
-hleg1 = legend('FFMPEG-x264','FFMPEG-x265','ARC-H264','ARC-H265');
+hleg1 = legend('FFMPEG-x264','FFMPEG-x265');
 set(hleg1,'Location','SouthEast','FontSize',12);
 axis([0 20 0 60]);
 set(gca,'XTick',[0:0.5:20]);
@@ -48,12 +35,11 @@ figure(2);
 plot(rate,split0001_PLLP_x264,'-ro','LineWidth', 2);
 hold;
 plot(rate,split0001_PLLP_x265,'-rs','LineWidth', 2);
-plot(arc_rate,split0001_PLLP_arc_h264,'-.bo','LineWidth', 2);
-plot(arc_rate,split0001_PLLP_arc_h265,'-.bs','LineWidth', 2);
+
 xlabel('编码码率（Mbps）','FontSize',12);
 ylabel('PLLP[0-1]-无损像素比','FontSize',12);
 title('split0001','FontSize',12);
-hleg1 = legend('FFMPEG-x264','FFMPEG-x265','ARC-H264','ARC-H265','FontSize',12);
+hleg1 = legend('FFMPEG-x264','FFMPEG-x265');
 set(hleg1,'Location','SouthEast','FontSize',12);
 axis([0 20 0 0.5]);
 set(gca,'XTick',[0:0.5:20]);
@@ -63,12 +49,11 @@ figure(3);
 plot(rate,split0001_SSIM_x264,'-ro','LineWidth', 2);
 hold;
 plot(rate,split0001_SSIM_x265,'-rs','LineWidth', 2);
-plot(arc_rate,split0001_SSIM_arc_h264,'-.bo','LineWidth', 2);
-plot(arc_rate,split0001_SSIM_arc_h265,'-.bs','LineWidth', 2);
+
 xlabel('编码码率（Mbps）','FontSize',12);
 ylabel('SSIM[0-1]','FontSize',12);
 title('split0001','FontSize',12);
-hleg1 = legend('FFMPEG-x264','FFMPEG-x265','ARC-H264','ARC-H265','FontSize',12);
+hleg1 = legend('FFMPEG-x264','FFMPEG-x265');
 set(hleg1,'Location','SouthEast','FontSize',12);
 axis([0 20 0 1.2]);
 set(gca,'XTick',[0:0.5:20]);
