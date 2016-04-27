@@ -22,8 +22,8 @@ title(splitno,'FontSize',22);
 hleg1 = legend('FFMPEG-x264','FFMPEG-x265');
 set(hleg1,'Location','SouthEast','FontSize',16);
 axis([0 20 0 60]);
-set(gca,'XTick',[0:0.5:20]);
-set(gca,'YTick',[0:3:60]);
+set(gca,'XTick',[0:2:20],'FontSize',14);
+set(gca,'YTick',[0:3:60],'FontSize',14);
 grid on;
 
 figure(2);
@@ -36,7 +36,7 @@ title(splitno,'FontSize',22);
 hleg1 = legend('FFMPEG-x264','FFMPEG-x265');
 set(hleg1,'Location','SouthEast','FontSize',16);
 axis([0 20 0 0.5]);
-set(gca,'XTick',[0:0.5:20]);
+set(gca,'XTick',[0:2:20],'FontSize',14);
 grid on;
 
 figure(3);
@@ -49,5 +49,5 @@ title(splitno,'FontSize',22);
 hleg1 = legend('FFMPEG-x264','FFMPEG-x265');
 set(hleg1,'Location','SouthEast','FontSize',16);
 axis([0 20 0 1.2]);
-set(gca,'XTick',[0:0.5:20]);
+set(gca,'XTick',[0:2:20],'FontSize',14);
 grid on;
