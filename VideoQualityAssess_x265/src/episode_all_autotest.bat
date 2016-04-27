@@ -11,3 +11,5 @@ call episode010_autotest.bat
 call episode011_autotest.bat
 call episode012_autotest.bat
 call episode013_autotest.bat
+
+
