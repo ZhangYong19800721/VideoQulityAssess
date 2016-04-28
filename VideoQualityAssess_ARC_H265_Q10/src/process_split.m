@@ -26,5 +26,5 @@ function process_split(splitno)
 	[PSNR20000K PSNRf20000K PLLP04000K PLLPf04000K] = Video_FR_Q(SourceVideo,RecoverVideo_04000K,numOfFrame,frameWidth,frameHeight,'yuv420p');
 	[PSNR20000K PSNRf20000K PLLP02000K PLLPf02000K] = Video_FR_Q(SourceVideo,RecoverVideo_02000K,numOfFrame,frameWidth,frameHeight,'yuv420p');
 
-	save(strcat(splitno,'_result_arc.mat');
+	save(strcat(splitno,'_result_arc.mat'));
 end
