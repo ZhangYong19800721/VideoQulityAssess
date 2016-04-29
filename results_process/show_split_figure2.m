@@ -1,4 +1,4 @@
-function show_split_figure(splitno)
+function show_split_figure2(splitno)
 
 rate = [20 18 16 14 12 10 8 6 4 2];
 
