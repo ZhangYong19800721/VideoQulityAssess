@@ -15,7 +15,7 @@ function [PSNR PSNRf PLLP PLLPf SSIM SSIMf] = Video_FR_Q(SourceYUV,RecoverYUV,nu
         error('Wrong chroma format');
     end
 	
-	frame_seq = 20;
+	frame_seq = 10;
 	
 	Y1 = zeros(frameWidth,frameHeight,frame_seq);
     U1 = zeros(w,h,frame_seq);
