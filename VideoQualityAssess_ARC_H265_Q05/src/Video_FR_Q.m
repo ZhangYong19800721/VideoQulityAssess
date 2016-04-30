@@ -27,7 +27,7 @@ function [PSNR PSNRf PLLP PLLPf SSIM SSIMf] = Video_FR_Q(SourceYUV,RecoverYUV,nu
     
 	PSNRf = zeros(1,numOfFrame);
     PLLPf = zeros(1,numOfFrame);
-	
+	SSIMf = zeros(1,numOfFrame);
 	range = 0;
     
     filename = RecoverYUV
