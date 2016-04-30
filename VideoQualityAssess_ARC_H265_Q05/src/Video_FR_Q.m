@@ -1,4 +1,4 @@
-function [PSNR PSNRf PLLP PLLPf] = Video_FR_Q(SourceYUV,RecoverYUV,numOfFrame,frameWidth,frameHeight,chroma)
+function [PSNR PSNRf PLLP PLLPf SSIM SSIMf] = Video_FR_Q(SourceYUV,RecoverYUV,numOfFrame,frameWidth,frameHeight,chroma)
     fid1 = fopen(SourceYUV,'r');
     fid2 = fopen(RecoverYUV,'r');
     
@@ -52,6 +52,7 @@ function [PSNR PSNRf PLLP PLLPf] = Video_FR_Q(SourceYUV,RecoverYUV,numOfFrame,fr
 		for idx_2 = 1:length(start_frame:end_frame)
 			PSNRf(start_frame + idx_2 - 1) = psnr(Y1(:,:,idx_2),Y2(:,:,idx_2),8);
 			PLLPf(start_frame + idx_2 - 1) = pllp(Y1(:,:,idx_2),Y2(:,:,idx_2),range);
+			SSIMf(start_frame + idx_2 - 1) = ssim(Y1(:,:,idx_2),Y2(:,:,idx_2));
 		end
 	
 		process = end_frame / numOfFrame
@@ -60,6 +61,7 @@ function [PSNR PSNRf PLLP PLLPf] = Video_FR_Q(SourceYUV,RecoverYUV,numOfFrame,fr
 	fclose(fid1);
     fclose(fid2);
     
-	PSNR = mean(PSNRf)
+	PSNR = mean(PSNRf);
     PLLP = mean(PLLPf);
+	SSIM = mean(SSIMf);
 end

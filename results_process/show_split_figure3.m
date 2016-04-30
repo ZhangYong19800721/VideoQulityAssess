@@ -1,4 +1,4 @@
-function show_split_figure_v2(splitno,file_ffmpeg_x264,file_ffmpeg_x265,file_arc_x264)
+function show_split_figure3(splitno,file_ffmpeg_x264,file_ffmpeg_x265,file_arc_x264)
 
 rate = [20 18 16 14 12 10 8 6 4 2];
 load(file_ffmpeg_x264);
