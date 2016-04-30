@@ -2,7 +2,7 @@
 
 #提取YUV文件
 
- ffmpeg -i NETFLIX_4096x2160_30fps_420p_200000K.split0011.ts -f rawvideo -pix_fmt yuv420p origin_split0011_99000K.yuv
+ ffmpeg -i NETFLIX_4096x2160_30fps_420p_200000K.split0011.mp4 -f rawvideo -pix_fmt yuv420p origin_split0011_99000K.yuv
  ffmpeg -i NETFLIX_4096x2160_30fps_420p_200000K.split0011-ARC-h265-Q10-20000K.ts -f rawvideo -pix_fmt yuv420p arc_split0011_20000K.yuv
  ffmpeg -i NETFLIX_4096x2160_30fps_420p_200000K.split0011-ARC-h265-Q10-18000K.ts -f rawvideo -pix_fmt yuv420p arc_split0011_18000K.yuv
  ffmpeg -i NETFLIX_4096x2160_30fps_420p_200000K.split0011-ARC-h265-Q10-16000K.ts -f rawvideo -pix_fmt yuv420p arc_split0011_16000K.yuv
