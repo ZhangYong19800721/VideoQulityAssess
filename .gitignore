@@ -4,4 +4,7 @@
 *.ts
 *.yuv
 *.jpg
+*.tif
+*.fig
+
 log.txt
