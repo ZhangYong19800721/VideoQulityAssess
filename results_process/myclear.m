@@ -1,0 +1,65 @@
+clear PSNR20000K;
+clear PSNR18000K;
+clear PSNR16000K; 
+clear PSNR14000K; 
+clear PSNR12000K; 
+clear PSNR10000K; 
+clear PSNR08000K; 
+clear PSNR06000K;
+clear PSNR04000K;
+clear PSNR02000K;
+
+clear PSNRf20000K;
+clear PSNRf18000K;
+clear PSNRf16000K; 
+clear PSNRf14000K; 
+clear PSNRf12000K; 
+clear PSNRf10000K; 
+clear PSNRf08000K; 
+clear PSNRf06000K;
+clear PSNRf04000K;
+clear PSNRf02000K;
+
+clear PLLP20000K;
+clear PLLP18000K;
+clear PLLP16000K; 
+clear PLLP14000K; 
+clear PLLP12000K; 
+clear PLLP10000K; 
+clear PLLP08000K; 
+clear PLLP06000K;
+clear PLLP04000K;
+clear PLLP02000K;
+
+clear PLLPf20000K;
+clear PLLPf18000K;
+clear PLLPf16000K; 
+clear PLLPf14000K; 
+clear PLLPf12000K; 
+clear PLLPf10000K; 
+clear PLLPf08000K; 
+clear PLLPf06000K;
+clear PLLPf04000K;
+clear PLLPf02000K;
+
+clear SSIM20000K;
+clear SSIM18000K;
+clear SSIM16000K; 
+clear SSIM14000K; 
+clear SSIM12000K; 
+clear SSIM10000K; 
+clear SSIM08000K; 
+clear SSIM06000K;
+clear SSIM04000K;
+clear SSIM02000K;
+
+clear SSIMf20000K;
+clear SSIMf18000K;
+clear SSIMf16000K; 
+clear SSIMf14000K; 
+clear SSIMf12000K; 
+clear SSIMf10000K; 
+clear SSIMf08000K; 
+clear SSIMf06000K;
+clear SSIMf04000K;
+clear SSIMf02000K;
